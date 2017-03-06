@@ -1,17 +1,16 @@
 {
-  "name": "react-express-boilerplate",
+  "name": "JW Player Code Test",
   "version": "1.0.0",
-  "description": "react with express boilerplate code",
+  "description": "JW Player Code Test",
   "main": "server.js",
   "scripts": {
     "dev": "webpack -d --watch --progress --colors",
     "build": "webpack -p",
-    "start": "nodemon server.js"
+    "start": "nodemon ./server/server.js"
   },
   "keywords": [
     "react",
-    "express",
-    "boilerplate"
+    "express"
   ],
   "author": "Adam Wang <adamw3494@gmail.com>",
   "license": "MIT",
