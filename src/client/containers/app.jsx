@@ -4,7 +4,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>React Express Boilerplate</h1>
+        <h1>JW Player Code Test</h1>
         {this.props.children}
       </div>
     )
