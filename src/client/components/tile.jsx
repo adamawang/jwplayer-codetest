@@ -7,13 +7,16 @@ class Tile extends Component {
 
   render() {
     const imageStyle = {
-      width: '300px'
+      width: '300px',
     }
     return (
-      <div>
+      <div className="container-tile">
         <img style={imageStyle} src={`http:${this.props.props.image}`} />
-        <p>{this.props.props.title}</p>
+        <div className="overlay-tile">
+          <p className="text-tile">{this.props.props.description}</p>
+        </div>
       </div>
+
     )
   }
 }

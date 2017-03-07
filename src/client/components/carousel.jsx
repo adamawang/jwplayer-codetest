@@ -9,24 +9,29 @@ class Carousel extends Component {
 
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       autoplay: true,
       autoplaySpeed: 5000,
       slidesToShow: 4,
       slidesToScroll: 1,
       arrows: true,
+      responsive: [
+        { breakpoint: 668, settings: { slidesToShow: 1 } },
+        { breakpoint: 968, settings: { slidesToShow: 2 } },
+        { breakpoint: 1224, settings: { slidesToShow: 3 } },
+      ],
     }
     const carousel = {
-      marginTop: '20px'
+      marginTop: '20px',
     }
     return (
       <div style={carousel}>
         <Slider {...settings}>
-          {this.props.props.map((video) => {
+          {this.props.props.map((video, i) => {
             return (
               <div>
-                <Tile props={video} />
+                <Tile key={i} props={video} />
               </div>
             )
           })}

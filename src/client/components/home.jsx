@@ -12,7 +12,7 @@ class Home extends Component {
   }
 
   componentDidUpdate() {
-    console.log("props in component: ", this.props)
+    // console.log("props in component: ", this.props)
   }
 
   render() {
@@ -25,13 +25,17 @@ class Home extends Component {
     const videoProps = this.props.video.data.playlist;
     return (
       <div>
-        <Jumbo props={videoProps.slice(0,6)} />
+        <div className="jumbo">
+          <Jumbo props={videoProps.slice(0,6)} />
+        </div>
         <br />
-        <Carousel props={videoProps.slice(6,11)} />
-        <br />
-        <Carousel props={videoProps.slice(11,16)} />
-        <br />
-        <Carousel props={videoProps.slice(16,22)} />
+        <div>
+          <Carousel props={videoProps.slice(6,11)} />
+          <br />
+          <Carousel props={videoProps.slice(11,16)} />
+          <br />
+          <Carousel props={videoProps.slice(16,22)} />
+        </div>
       </div>
     )
   }
