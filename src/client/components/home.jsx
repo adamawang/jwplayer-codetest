@@ -30,11 +30,12 @@ class Home extends Component {
         </div>
         <br />
         <div>
-          <Carousel props={videoProps.slice(6,11)} />
-          <br />
-          <Carousel props={videoProps.slice(11,16)} />
-          <br />
-          <Carousel props={videoProps.slice(16,22)} />
+          <Carousel props={videoProps.slice(6,11)} title={"Documentaries"} />
+          <hr />
+          <Carousel props={videoProps.slice(11,16)} title={"Live Events"} />
+          <hr />
+          <Carousel props={videoProps.slice(16,22)} title={"Short Films"} />
+          <hr />
         </div>
       </div>
     )
