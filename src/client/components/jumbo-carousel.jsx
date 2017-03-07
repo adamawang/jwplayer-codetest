@@ -22,16 +22,13 @@ class Jumbo extends Component {
       ],
     }
 
-    const jumboImage = {
-      width: '500px'
-    }
     return (
-      <div>
+      <div className="jumbo-carousel">
         <Slider {...settings}>
           {this.props.props.map((video) => {
             return (
               <div className="container">
-                <img style={jumboImage} src={`http:${video.image}`} />
+                <img className="jumbo-image" src={`http:${video.image}`} />
                 <div className="overlay">
                   <p className="text">{video.title}</p>
                   <p className="text">{video.description}</p>
