@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   background-color: #181818;
 }
 
@@ -42,6 +42,11 @@ body {
   height: auto;
 }
 
+.image-div {
+  width: 300px;
+  height: 200px;
+}
+
 .overlay {
   position: absolute;
   bottom: 0;
@@ -49,6 +54,23 @@ body {
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+.overlay-jumbo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(top,rgba(255,0,0,0),rgba(0,0,0,0.6)); /*Safari 5.1-6*/
+  background: -o-linear-gradient(bottom,rgba(255,0,0,0),rgba(0,0,0,0.6)); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(bottom,rgba(255,0,0,0),rgba(0,0,0,0.6)); /*Fx 3.6-15*/
+  background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,0.6)); /*Standard*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .overlay-tile {
@@ -73,8 +95,20 @@ body {
   font-size: 12px;
   position: relative;
   overflow: auto;
-  width: 500px;
+  width: 495px;
   word-wrap: normal;
+}
+
+.text-jumbo {
+  color: white;
+  font-size: 12px;
+  position: relative;
+  overflow: auto;
+  width: 450px;
+  padding-left: 12px;
+  padding-bottom: 20px;
+  word-wrap: normal;
+  text-align: left;
 }
 
 .text-tile {
@@ -97,12 +131,9 @@ body {
   text-align: left;
   font-size: 15px;
   overflow: hidden;
-  padding-left: 10px
-}
-
-.image-div {
+  padding-left: 10px;
   background-color: #505050;
-  width: 300px;
-  height: 212px;
-  overflow: hidden;
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
