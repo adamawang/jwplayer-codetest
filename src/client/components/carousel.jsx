@@ -13,20 +13,18 @@ class Carousel extends Component {
       infinite: true,
       autoplay: true,
       autoplaySpeed: 5000,
-      slidesToShow: 4,
+      slidesToShow: 5,
       slidesToScroll: 1,
       arrows: true,
       responsive: [
         { breakpoint: 668, settings: { slidesToShow: 1 } },
         { breakpoint: 968, settings: { slidesToShow: 2 } },
         { breakpoint: 1224, settings: { slidesToShow: 3 } },
+        { breakpoint: 1700, settings: { slidesToShow: 4 } },
       ],
     }
-    const carousel = {
-      marginTop: '20px',
-    }
     return (
-      <div style={carousel}>
+      <div className="carousel">
         <Slider {...settings}>
           {this.props.props.map((video, i) => {
             return (
