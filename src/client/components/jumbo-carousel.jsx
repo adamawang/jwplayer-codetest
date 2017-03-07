@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import JumboTile from './jumbo-tile';
 
 
 class Jumbo extends Component {
@@ -25,14 +26,10 @@ class Jumbo extends Component {
     return (
       <div className="jumbo-carousel">
         <Slider {...settings}>
-          {this.props.props.map((video) => {
+          {this.props.props.map((video, i) => {
             return (
-              <div className="container">
-                <img className="jumbo-image" src={`http:${video.image}`} />
-                <div className="overlay">
-                  <p className="text">{video.title}</p>
-                  <p className="text">{video.description}</p>
-                </div>
+              <div>
+                <JumboTile key={i} props={video} />
               </div>
             )
           })}

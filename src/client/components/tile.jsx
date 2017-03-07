@@ -13,10 +13,10 @@ class Tile extends Component {
       <div className="container-tile">
         <div className="image-div">
           <img style={imageStyle} src={`http:${this.props.props.image}`} />
-          <p className="text-title">{this.props.props.title}</p>
+          <div className="text-title">{this.props.props.title}</div>
         </div>
         <div className="overlay-tile">
-          <p className="text-tile">{this.props.props.description}</p>
+          <div className="text-tile">{this.props.props.description}</div>
         </div>
       </div>
 
