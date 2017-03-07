@@ -4,7 +4,9 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1 className="project-title">JW Player Code Test</h1>
+        <div className="container">
+          <img className="project-logo" src="../../icons/logo.svg" alt="test logo" />
+        </div>
         {this.props.children}
       </div>
     )
