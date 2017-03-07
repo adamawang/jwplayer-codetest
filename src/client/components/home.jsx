@@ -25,7 +25,7 @@ class Home extends Component {
     const videoProps = this.props.video.data.playlist;
     return (
       <div>
-        <div className="jumbo">
+        <div>
           <Jumbo props={videoProps.slice(0,6)} />
         </div>
         <br />
