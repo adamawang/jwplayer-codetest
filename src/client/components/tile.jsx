@@ -2,26 +2,57 @@ import React, { Component } from 'react';
 
 
 class Tile extends Component {
-  componentDidMount() {
-    // console.log("props in tile: ", this.props);
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+      dropdownClass: 'noshow',
+    }
   }
 
   toggleMenu() {
-    document.getElementById("myDropdown").classList.toggle("show");
-    let dropdown = document.getElementById("myDropdown").classList
-    console.log("clicked: ", dropdown);
+    if(!this.state.open) {
+      this.setState({
+        open: true,
+        dropdownClass: 'dropdown-content'
+      })
+    } else {
+      this.setState({
+        open: false,
+        dropdownClass: 'noshow'
+      })
+    }
   }
 
   render() {
     return (
       <div className="container-tile">
         <div className="image-div">
-          <img className="image-tile" src={`http:${this.props.props.image}`} alt="video cover photo"/>
-          <button className="tile-button" onClick={() => this.toggleMenu()} />
-          <div className="text-title">{this.props.props.title}</div>
+          <img
+            className="image-tile"
+            src={`http:${this.props.props.image}`}
+            alt="video cover photo"
+          />
+          <button
+            className="tile-button"
+            onClick={() => this.toggleMenu()}
+          >
+            <div className="dropdown">
+              <div className={this.state.dropdownClass}>
+                <a href="#">Details</a>
+                <a href="#">Save Video</a>
+                <a onClick={() => this.toggleMenu()}>Cancel</a>
+              </div>
+            </div>
+          </button>
+          <div className="text-title">
+            {this.props.props.title}
+          </div>
         </div>
         <div className="overlay-tile">
-          <div className="text-tile">{this.props.props.description}</div>
+          <div className="text-tile">
+            {this.props.props.description}
+          </div>
         </div>
       </div>
     )
@@ -29,13 +60,3 @@ class Tile extends Component {
 }
 
 export default Tile;
-
-// dropdown Code
-
-// <div className="dropdown">
-//   <div id="myDropdown" className="dropdown-content">
-//     <a href="#home">Home</a>
-//     <a href="#about">About</a>
-//     <a href="#contact">Contact</a>
-//   </div>
-// </div>
