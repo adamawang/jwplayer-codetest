@@ -11,18 +11,17 @@ class Home extends Component {
     this.props.videoData();
   }
 
-  componentDidUpdate() {
-    // console.log("props in component: ", this.props)
-  }
-
   render() {
     if(!this.props.video.data){
-      return <div>Loading Video Data</div>
+      return (
+        <div className="loading">
+          Loading Video Data...
+        </div>
+      )
     }
-    const carousel = {
-      margin: '20px'
-    }
+    // save props into constant, pass pieces of array into carousel components
     const videoProps = this.props.video.data.playlist;
+
     return (
       <div>
         <div>
