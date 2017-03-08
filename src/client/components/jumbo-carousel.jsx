@@ -4,12 +4,7 @@ import JumboTile from './jumbo-tile';
 import { NextArrow, PrevArrow } from './nav-buttons';
 
 
-
 class Jumbo extends Component {
-  componentDidUpdate() {
-    // console.log("props in jumbo: ", this.props);
-  }
-
   render() {
     const settings = {
       dots: true,
