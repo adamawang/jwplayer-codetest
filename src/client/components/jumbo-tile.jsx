@@ -14,7 +14,6 @@ class JumboTile extends Component {
           <div className="text-jumbo">{this.props.props.description}</div>
         </div>
       </div>
-
     )
   }
 }
