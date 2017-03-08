@@ -10,6 +10,10 @@ class JumboTile extends Component {
           alt="video cover photo"
         />
         <div className="overlay-jumbo">
+          <img
+            className="jumbo-play"
+            src={'../../icons/play.svg'}
+          />
           <div className="text-jumbo-title">
             <h1>
               {this.props.props.title}
