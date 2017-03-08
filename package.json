@@ -41,6 +41,6 @@
     "grunt-contrib-cssmin": "2.0.0",
     "grunt-contrib-less": "1.4.0",
     "grunt-nodemon": "0.4.2",
-    "grunt-webpack": "2.0.1",
+    "grunt-webpack": "2.0.1"
   }
 }
