@@ -3,7 +3,7 @@
 Technologies used: React with Redux, LESS, Grunt, Node, Express
 
 ### Installation
-To begin, clone the repository on your machine and run:
+To begin, clone the repository on your machine:
 
 ```bash
 git clone https://github.com/adamawang/jwplayer-codetest.git
