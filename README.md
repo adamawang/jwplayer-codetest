@@ -27,6 +27,12 @@ Next, run the grunt task in terminal to run webpack production build, compile LE
 grunt
 ```
 
+If you run into any issues with the command not being found, install grunt globally by running:
+
+```bash
+npm i -g grunt
+```
+
 The server should be found at:
 
 ```bash
